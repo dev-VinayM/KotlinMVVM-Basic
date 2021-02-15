@@ -7,5 +7,5 @@ import retrofit2.http.GET
 interface Webservice {
 
     @GET("marvel")
-    fun getHeroes(): Call<HeroData>
+    fun getHeroes(): Call<List<HeroData>>
 }

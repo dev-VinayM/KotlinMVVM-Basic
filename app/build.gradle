@@ -18,8 +18,13 @@ android {
     }
 
     buildTypes {
+        debug{
+            buildConfigField "String", 'BASE_URL', "\"https://simplifiedcoding.net/demos/\""
+        }
+
         release {
             minifyEnabled false
+            buildConfigField "String", 'BASE_URL', "https://simplifiedcoding.net/demos/"
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
